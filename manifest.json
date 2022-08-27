@@ -1,7 +1,7 @@
 {
     "name": "AvatarPopUp",
     "version": "1.0.0",
-    "description": "View user avatar in popup",
+    "description": "Allows opening user's avatar in a popup by clicking on their avatar in the profile.",
     "author": "ephemeral#5338",
     "license": "MIT"
 }

@@ -1,5 +1,5 @@
 # AvatarPopUp
-View user avatar in popup.
+Allows opening user's avatar in a popup by clicking on their avatar in the profile.
 
 ## Previews
 ### Hovered avatar
