@@ -1,7 +1,7 @@
 # AvatarPopUp
 View user avatar in popup.
 
-## Preview
+## Previews
 ### Hovered avatar
 ![image](https://user-images.githubusercontent.com/52526068/187019896-fa681d28-7949-4a7f-b508-e446c6401231.png)
 ### Pop-up
