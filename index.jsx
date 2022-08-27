@@ -3,14 +3,14 @@ const { React, getModule, getModuleByDisplayName, subscribe } = require("powerco
 const { inject, uninject } = require("powercord/injector");
 const { open } = require("powercord/modal");
 
-module.exports = class ViewAvatars extends Plugin {
+module.exports = class AvatarPopUp extends Plugin {
     startPlugin() {
         const { avatarHoverTarget, clickable, avatarHintInner } = getModule(['avatarHint'], false);
         const Clickable = getModuleByDisplayName("Clickable", false);
         const Mask = getModuleByDisplayName("Mask", false);
 
         subscribe(x => x.default?.displayName === "UserProfileModalHeader", UserProfileModalHeader => {
-            inject("view-avatars", UserProfileModalHeader, "default", (args, res) => {
+            inject("avatar-popup", UserProfileModalHeader, "default", (args, res) => {
                 const avatar = res.props.children[1].props.children[0].props.children[1];
                 res.props.children[1].props.children[0].props.children[1] = <Clickable className={`avatarWrapperNormal-ahVUaC ${clickable}`} onClick={() => this._openAvatarModal(args[0].user)}>
                     <div className={avatarHoverTarget}>
@@ -27,7 +27,7 @@ module.exports = class ViewAvatars extends Plugin {
         })
     }
     pluginWillUnload() {
-        uninject("view-avatars");
+        uninject("avatar-popup");
     }
 
     _openAvatarModal(user) {
